@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and interactive Income-Expense Calculator to track your financial transactions">
+    <title>Income-Expense Calculator</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="container">
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+        <h1>Income-Expense Calculator</h1>
+
+        <main>
+            <section class="balance">
+                <p>Your Balance:</p>
+                <p id="balance">$0.00</p>
+            </section>
+
+            <section class="form">
+                <input type="text" id="description" placeholder="Description" aria-label="Transaction Description">
+                <div class="amount-type">
+                    <input type="number" id="amount" placeholder="Amount" aria-label="Transaction Amount">
+                    <select id="type" aria-label="Transaction Type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <button id="add">Add Transaction</button>
+            </section>
+
+            <section class="filter">
+                <fieldset>
+                    <legend>Filter Transactions</legend>
+                    <label><input type="radio" name="filter" value="all" checked> All</label>
+                    <label><input type="radio" name="filter" value="income"> Income</label>
+                    <label><input type="radio" name="filter" value="expense"> Expenses</label>
+                </fieldset>
+            </section>
+
+            <section class="transactions">
+                <h2>Transactions</h2>
+                <ul id="transactions-list"></ul>
+            </section>
+
+            <button id="clearAll" aria-label="Clear All Transactions">Clear All Transactions</button>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

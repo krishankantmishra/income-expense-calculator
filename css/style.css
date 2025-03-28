@@ -1,0 +1,155 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+}
+
+h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#darkModeToggle {
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: auto;
+}
+
+#darkModeToggle:hover {
+    background: #222;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#add {
+    background: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+#clearAll {
+    background: #dc3545;
+    color: white;
+}
+
+.filter-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filter-group button {
+    background: #007bff;
+    color: white;
+    padding: 8px;
+    flex: 1;
+}
+
+.transactions-list {
+    margin-top: 15px;
+}
+
+.dark-mode {
+    background: #222;
+    color: #ddd;
+}
+
+.dark-mode .container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode button {
+    color: white;
+}
+
+.dark-mode #darkModeToggle {
+    background: #555;
+}
+
+.dark-mode .filter-group button {
+    background: #555;
+}
+
+/* 🎯 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjusted for better spacing */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Add another media query for smaller screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    input, select {
+        padding: 6px; /* Reduced padding for smaller inputs */
+    }
+
+    button {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
